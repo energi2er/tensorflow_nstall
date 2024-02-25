@@ -1,4 +1,4 @@
-# tensorflow_nstall
+# tensorflow_install
 here is some notes for installing tensorflow on ubuntu and use by gpu 
 #1 install timeshift
 2#check the tensor flow combination from link:https://www.tensorflow.org/install/source#gpu
