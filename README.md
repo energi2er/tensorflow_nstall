@@ -21,4 +21,5 @@ tensorflow-2.13.0	  3.8-3.11	Clang 16.0.0	Bazel 5.3.0	    8.6	  11.8
 
 
   i use this link to install cuda and cuDNN
+https://gist.github.com/neouranos/51dd12d9471eb73b2348d373b605b45a
 
