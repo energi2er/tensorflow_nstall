@@ -18,3 +18,7 @@ here is some notes for installing tensorflow on ubuntu and use by gpu
 tensorflow-2.13.0	  3.8-3.11	Clang 16.0.0	Bazel 5.3.0	    8.6	  11.8
   tensorflow-2.12.0	  3.8-3.11	GCC 9.3.1	    Bazel 5.3.0	    8.6	  11.8
 
+
+
+  i use this link to install cuda and cuDNN
+
