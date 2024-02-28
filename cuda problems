@@ -1,8 +1,38 @@
 cuda problems
 
 https://forums.developer.nvidia.com/t/cant-install-cuda-11-8-on-ubuntu-22-04-lts/263227/4
-
+ download cuda run file installation
+https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=22.04&target_type=runfile_local
 
 Thank you.
 
 That helped in my case. CUDA 11.8 with cuDNN 8.9.5 is working on driver 535, ubuntu 22.04 kernel 6.32
+
+!!https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#runfile-overview
+
+sudo sh cuda_12.2.0_535.54.03_linux.run 
+!install it without driver
+!add drectory of cuda to PATH -post-installation-actions
+!https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#post-installation-actions
+export LD_LIBRARY_PATH=/usr/local/cuda-12.2/lib64\
+                         ${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+
+export PATH=/usr/local/cuda-12.2/bin${PATH:+:${PATH}}
+!POWER9 Setup
+systemctl status nvidia-persistenced
+sudo systemctl enable nvidia-persistenced
+
+
+!Disabling Nouveau
+!Create a file at /etc/modprobe.d/blacklist-nouveau.conf with the following contents:
+
+sudo nano /etc/modprobe.d/blacklist-nouveau.conf
+
+blacklist nouveau
+options nouveau modeset=0
+sudo update-initramfs -u
+
+
+ 
+
+
